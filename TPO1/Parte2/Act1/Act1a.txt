@@ -4,7 +4,7 @@ Para cada elemento i del arreglo,excepto el ultimo:
 	Comparar i con j, para cada j que es un elemento posterior a i.
 	Si i<j, se incrementa cont[j].Sino, se incrementa cont[i].
 
-En el arreglo final S, se arreglo en la cont[i] al elemento i del arreglo original.
+En el arreglo final S, se agrega en la posicion cont[i] al elemento de posicion i del arreglo original.
 	
 Este algoritmo, para el caso i=j, entra en el condicional 'else'. Por lo tanto, cuando 2 elementos sean iguales,se considera al 1er elemento
 de la comparacion como mayor, y se incrementa el contador de este primer elemento.

@@ -44,6 +44,11 @@ public class Trie {
         // marca el ultimo nodo encontrado como el fin de la palabra
         pCrawl.isEndOfWord = true;
     }
+    /*
+     Calculo de eficiencia:
+     Como tenemos un bucle definido de n repeticiones, tal que n=longitud de la 
+     palabra que quiere ingresarse en el diccionario, sablemos que es de O(n)
+     */
 
     static boolean insertSinonim(String key,String sinm){
         int level;
@@ -67,6 +72,12 @@ public class Trie {
         //Se logro agregar el sinonimo a la palabra
         return true;
     }
+    /*
+     Calculo de eficiencia:
+     Al igual que con el insertar palabra, el insertar sinonimo tiene O(n). En este caso, n es igual a
+     la longitud de la palabra a la que se le va a agregar el sinonimo, pudiendo truncarse el recorrido
+     en situaciones donde la palabra a la que se le piensa agregar el sinonimo no existe en el diccionario. 
+     */
 
     static boolean search(String key) {
         int level;
@@ -85,6 +96,11 @@ public class Trie {
 
         return (pCrawl.isEndOfWord);
     }
+    /*
+     Calculo de eficiencia:
+     Para encontrar si una palabra esta en el diccionario, debe recorrerse(en el peor caso posible) n nodos correspondientes
+     a los n caracteres de la palabra. Por lo tanto, el orden es O(n)
+     */
 
     static LinkedList searchSynonims(String key) {
         int level;
@@ -104,6 +120,11 @@ public class Trie {
 
         return pCrawl.sinonims;
     }
+    /*
+     Calculo de eficiencia:
+     Al igual la busqueda de palabras en el diccionario, la busqueda sinonimos requiere(primero que nada) recorrer n nodos
+     que representan los n caracteres de la palabra cuyos sinonimos queres ver. Por eso, O(n)
+     */
 
 
     public static void main(String args[]) {
@@ -147,4 +168,5 @@ public class Trie {
 
 
     }
+
 }
