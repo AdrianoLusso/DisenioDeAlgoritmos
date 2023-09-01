@@ -1,0 +1,26 @@
+Ciclo Euleriano: visita cada vertice solo una vez y requiere que todos los vertices tengan 
+grado par. 
+Ciclo Hamiltoneano: visita cada nodo solo una vez. 
+
+
+1)Grafo con un circuito hamiltoniano pero sin un circuito euleriano
+A --- B
+|\    |
+| \   |
+|  \  |
+|   \ |
+C --- D
+Existe un circuito Hamiltoniano: A -> B -> D -> C -> A. Se puede recorrer todos los vértices exactamente una vez y volver al vértice inicial.
+No existe un circuito Euleriano. Para que un grafo no dirigido tenga un circuito Euleriano, todos sus vértices deben tener grado par. En este grafo, los vértices A y C tienen grado impar (3), lo que hace imposible tener un circuito Euleriano.
+2)2. Grafo con un circuito euleriano pero sin un circuito hamiltoniano
+Si o si repetis un vertice una vez
+Foto 
+3)Grafo con un circuito hamiltoniano y un circuito euleriano
+A -- B
+|    |
+D -- C
+Existe un circuito Hamiltoniano: A -> B -> C -> D -> A. Puedes recorrer todos los vértices exactamente una vez y regresar al vértice de inicio.
+Existe un circuito Euleriano: A -> B -> C -> D -> A. Puedes recorrer todas las aristas exactamente una vez y regresar al vértice de inicio.
+4)  Hasta ahora no encontre, verificar bien despues. 
+
+

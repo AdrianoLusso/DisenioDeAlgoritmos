@@ -1,0 +1,27 @@
+IMPLEMENTACION ESTATICA
+
+Ventajas:
+
+Eficiencia en el Espacio: Dado que la cantidad de memoria necesaria se reserva de antemano, no se sobrecarga de almacenamiento a estructuras de datos adicionales.
+Predicción de Recursos: Si el número de vértices y arcos es conocido y no cambiará, esta implementación puede ser más predecible en términos de uso de recursos.
+Eficiencia en Operaciones Simples: Las operaciones de acceso a vértices y arcos pueden ser más rápidas debido al uso de matrices o estructuras de datos estáticas.
+Desventajas:
+Tamaño Fijo:no se puede agregar o eliminar vértices y arcos más allá del tamaño inicialmente definido.
+Ineficiencia en Espacio: Si la mayoría de los vértices y arcos no se utilizan, se desperdicia memoria.
+Dificultad en Modificaciones: Las inserciones y eliminaciones de vértices y arcos pueden ser costosas y complicadas debido a la necesidad de reorganizar la estructura subyacente.
+Ineficiencia en Casos Pequeños: Si el grafo es pequeño en comparación con el tamaño de la reserva de memoria, puede haber una sobrecarga en términos de espacio.
+
+
+IMPLEMENTACION DINÁMICA
+
+Ventajas:
+
+Flexibilidad: La capacidad de agregar y eliminar vértices y arcos dinámicamente hace que esta implementación sea adecuada para grafos en evolución.
+Uso Eficiente de Espacio: Solo se asigna memoria para los vértices y arcos realmente presentes, lo que es beneficioso para grafos grandes con una cantidad limitada de conexiones.
+Operaciones de Modificación Eficientes: Agregar o eliminar vértices y arcos puede ser más eficiente, ya que no se requiere reorganización masiva de estructuras de datos.
+Adecuado para Grafos Pequeños: Es más eficiente en términos de espacio para grafos pequeños.
+
+Desventajas:
+Uso Ineficiente de Recursos: En comparación con la implementación estática, puede haber más sobrecarga debido a las estructuras de datos adicionales necesarias para gestionar la dinámica.
+Menos Eficiencia en Acceso: Las operaciones de acceso pueden ser ligeramente más lentas debido a la necesidad de buscar y actualizar estructuras en tiempo real.
+Complejidad Adicional: La gestión de inserciones y eliminaciones puede ser más compleja y propensa a errores. Hay que realizar un control de referencias y punteros, es necesario administrarlos para mantener la coherencia de las conexiones entre vértices y arcos. Las inserciones y eliminaciones dejan espacios que deben ser gestionados correctamente para evitar referencias nulas o descontroladas. Asi como tambien realizar una gestión de memoria, en implementaciones dinámicas, el grafo crece y cambia dinámicamente. Esto puede requerir la asignación y liberación dinámica de memoria para nuevos vértices y arcos, lo que agrega complejidad adicional en términos de gestión de memoria y prevención de fugas de memoria.
