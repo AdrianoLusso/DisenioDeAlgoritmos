@@ -1,0 +1,36 @@
+
+
+1- Las estructuras de datos utilizadas son:
+
+Arreglos: Nos permite almacenar cada uno de los miembros a emparejar y poder dividirlos en funcion de su
+rol (hombre/mujer,productor/consumidor,ofertante/demandante,etc). Tambien podemos tener arreglos auxiliares que 
+guarden informacion relevante sobre los hombres y mujeres. Por ejemplo, el arreglo de booleanos que indican si
+cada hombre esta emparejado, o el arreglo de string que indican cual es la pareja actual de cada mujer.
+
+Matrices: Nos permite representar una relacion uno a muchos entre hombre a mujeres, y viceversa. Permite representar
+cual es el orden de preferencia que tiene cada hombre con respecto a las mujeres, y viceversa.
+
+3-Eficiencia en tiempo:
+
+El peor caso posible es n * (n-1) + 1,que al operar
+se obtiene orden N(N^2).La explicacion esta basada en una traza hecha en el power point anexado,diapositivas de 6
+a 27.
+
+4-Prueba de correctitud:
+
+Sabemos que se cumplen las siguientes propiedades:
+1-Los hombres se declaran a las mujeres en orden decreciente de preferencia.
+2-Una mujer emparejada solo podra cambiar de estado para mejorar a su pareja.
+
+En cada iteracion un hombre propone salir a una mujer. Existen un total de n^2 posibles comparaciones.
+Siendo P(t) el conjunto de pares (h,m) en los que h le ha propuesto salir a m al final de una iteracion t,
+sabemos que para todo t,P(t+1) > P(t).Esto es porque sabemos que en cada iteracion, se sumara un par al conjunto.
+Como solo hay n^2 posibles comparaciones, P(t) puede aumentar hasta n^2 veces, por lo que nunca habra mas de n^2 iteraciones.
+Con esto queda demostrada la correctitud.
+
+5- La estrategia algoritmica para resolver este problema fue reducirlo al problema del bipartite matching. Se tiene un grafo
+bipartito donde los nodos de las izquierda son los hombres y los de la derecha las mujeres. Todos nodos hombres tiene un arco etiquetado
+hacia todos los nodos pertenecientes al conjunto U, sea U = Mujeres con las que NO tenga prohibido estar. La etiqueta de cada arco se
+conforma por 2 numeros {A,B} siendo A la preferencia del nodo hombre sobre ese arco y B la preferencia del nodo Mujer sobre ese arco.Las
+etiquetas A sirven para que se sepa en que orden los nodos hombres trataran de matchear con un nodo mujer. Las etiquetas B son las usada
+para el conteo maximo matching.Se quiere un maximum matching cuya suma de etiquetas B sea lo mas grande posible.
