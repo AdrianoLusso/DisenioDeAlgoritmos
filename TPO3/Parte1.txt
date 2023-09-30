@@ -1,0 +1,29 @@
+1- Define un problema de optimizacion basado en 2 partes. Una funcion la cual busca maximizarse o
+minimizarse y un conjunto de constraints que deben cumplirse.
+
+2-
+a- Shortest path problem: dado un grafo y 2 nodos A y B, cual es el camino mas corto que existe entre
+A y B.
+
+b-Travelling salesman problem: Dado un grafo cuyos arcos entre nodos tienen una etiqueta que representa
+el costo de viajar de un nodo al otro,y un nodo A. Cual es el camino con el menor costo posible que
+me permita empezar en A, pasar por el resto de nodos solo 1 vez y terminar en A?
+
+Bin packing problem: dado un contenedor y un conjunto de objetos que deben ubicarse en el contenedor,
+cual es la mejor manera de ubicar las cosas dentro del contenedor?
+
+3-
+Con una reduccion del problema hace referencia a un proceso que permita mapear cualquier instancia
+del problema original con una instancia de otro problema para el cual ya conozcamos un algoritmo que
+lo solucione, de forma que si una instancia en el problema original debe tener respuesta X, la solucion
+a la instancia traducida(reducida seria el termino correcto) del otro problema ya resuelto tambien sea X.
+
+4-El problema de la mochila es: supongamos que hay un ladron que tiene una mochila que puede aguantar
+8 pounds en contenido. El ladron entro a robar a una casa e intenta ver que le conviene robar. El ladron
+ve que en la casa hay
+
+*4 punds de oro
+*3 pounds de plata
+*10 punds de raisins
+
+El ladron quiere llevarse en la mochila la combinacion de objetos que mas dinero le retribuya.
