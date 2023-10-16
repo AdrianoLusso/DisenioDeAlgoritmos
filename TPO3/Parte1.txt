@@ -27,3 +27,43 @@ ve que en la casa hay
 *10 punds de raisins
 
 El ladron quiere llevarse en la mochila la combinacion de objetos que mas dinero le retribuya.
+
+5-Se plantea que primero hay que encontrar una funcion de maximizacion, que permita maximizar la cantidad de objetos que mas dinero
+valga. Luego buscamos el constraint asoaciado a esa funcion, que seris que el total pounds(oro,plata y raisins) en la mochila sea
+menor o igual a 8. Ahora la estrategia seguir es:
+
+1-Robo todo el oro posible hasta que me quede sin oro
+2-Robo toda la plata posible hasta que me quede sin plata
+3- lo mismo con raisins
+
+Este algoritmo es un algoritmo voraz.
+
+6-Es una version discreta del problema de la mochila. Tenemos n elementos y en cada paso debemos tomar o un elemento entero o ninguno.
+De otra forma, en el problema original es como que los elementos son en cantidades muy pequenias, por lo que podriamos tomar un poco
+de cada uno. En este problema, hablamos de ladrillos de oro,plata y raisin. O tomas el ladrillo entero, o no lo tomas. Se mantiene 
+el hecho de que cada elemento tiene un peso y de que nuestra mochila tiene un constraint en cantidad de peso maximo.
+
+Volviendo a la formulacion del problema, ahora el ladron encuentra, en vez de minerales en pounds, un reloj, una radio,un florero y
+un cuadro. Hay 2 por cada uno de estos elementos. Su mochila solo soporta 8 pounds.
+
+7- El ladron lento hace lo siguiente: Pone cosas en la mochila hasta que este completa. Calcula el valor. Entonces, vacia la mochila 
+y realiza otra combinacion de cosas para calcular el valor. Hace esto para todas las comninaciones posibles y luego elige la combinacion
+de mayor valor. Esto se llama algoritmo de fuerza bruta.
+
+8-El ladron en la carcel lo reformula asi:
+
+Primero, busco que fue exactamente lo que hizo y porque le llevo tanto tiempo. Es decir, descubrir la funcion que el mismo (ladron lento)
+estaba llevando a cabo para maximizar las ganancias. La ecuacion esta que uso en foto screenshoteada 1. El constraint respecto al peso
+es la foto 2. En base a esto, se logro hacer una formulacion matematica del problema a resolver. Luego el ladron penso que la solucion a su
+problema era probando todos los valores posibles de x en la funcion de costo tal que se encuentre el valor maximo y se respete la funcion
+ de constraint. Ahi el ladron se dio cuenta que la cantidad de intentos que debia hacer para encontrar el valor por fuerza bruta era exponencial
+en funcion de la cantidad de elementos posibles. Con eso, concluyo la razon por la que tardo tanto tiempo en encontrar el valor maximo y fue atrapado
+por la policia.
+ 
+
+9- La programacion dinamica es un metodo para reducir el tiempo de ejecucion de un algoritmo mediante la utilizacion de subproblemas superpuestos y 
+subestructuras optimas.
+
+
+
+
